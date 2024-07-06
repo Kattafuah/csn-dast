@@ -1,4 +1,4 @@
-name: Deployment Workflow for Githu Pages
+name: Deployment Workflow for Github Pages
 
 on:
   push: 
@@ -12,4 +12,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: SAST Scan
-        run: grep -r -e 'password' -e 'secret' -e 'key'
+        run: grep -Ri -w '(password|passwd|pass|secret|keys)' .
+        
