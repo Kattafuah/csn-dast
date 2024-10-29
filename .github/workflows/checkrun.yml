@@ -2,7 +2,7 @@ name: Check Suite Example
 
 on:
   check_suite:
-    types: [requested, completed]
+    types: [completed]
 
 jobs:
   suite-response:
